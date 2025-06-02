@@ -3,14 +3,12 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "homepage": "https://buildwithlayer.github.io/openapi-to-tools",
+    "homepage": "https://buildwithlayer.github.io/openapi-to-tools-demo",
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",
         "lint": "eslint .",
-        "preview": "vite preview",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist"
+        "preview": "vite preview"
     },
     "dependencies": {
         "@buildwithlayer/openapi-to-tools": "1.3.1",
@@ -30,7 +28,6 @@
         "eslint-plugin-react-hooks": "^5.2.0",
         "eslint-plugin-react-refresh": "^0.4.19",
         "eslint-plugin-sort": "^4.0.0",
-        "gh-pages": "^6.3.0",
         "globals": "^16.0.0",
         "typescript": "~5.8.3",
         "typescript-eslint": "^8.32.1",

@@ -1,0 +1,36 @@
+name: gh-pages
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+on:
+    push:
+        branches: [ main ]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            -   uses: actions/checkout@v4
+            -   uses: actions/setup-node@v4
+            -   name: Install dependencies
+                id: install
+                run: npm install
+            -   name: Setup pages
+                id: pages
+                uses: actions/configure-pages@v5
+            -   name: Build with NPM
+                run: npm run build
+            -   name: Upload artifact
+                uses: actions/upload-pages-artifact@v3
+                with:
+                    path: dist/
+    deploy:
+        environment:
+            name: github-pages
+            url: https://buildwithlayer.github.io/openapi-to-tools-demo
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
+            -   name: Deploy to GitHub Pages
+                id: deployment
+                uses: actions/deploy-pages@v4

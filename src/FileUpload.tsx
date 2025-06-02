@@ -1,5 +1,5 @@
-import {OpenAPISpec, upgrade} from '@buildwithlayer/openapi-zod-spec';
-import type {OpenAPI} from '@buildwithlayer/openapi-zod-spec/dist/3/1/1/open-api';
+import type {OpenAPI} from '@buildwithlayer/openapi-zod-spec/3/1/1/open-api.js';
+import {OpenAPISpec, upgrade} from '@buildwithlayer/openapi-zod-spec/index.js';
 import {type ChangeEvent, useState} from 'react';
 import {parse} from 'yaml';
 

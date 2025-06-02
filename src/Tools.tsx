@@ -1,5 +1,5 @@
 import './Tools.css';
-import type {APITool} from '@buildwithlayer/openapi-to-tools/dist/types';
+import type {APITool} from '@buildwithlayer/openapi-to-tools/types.js';
 
 interface IToolsProps {
     tools: APITool[];

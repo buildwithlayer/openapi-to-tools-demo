@@ -1,7 +1,7 @@
 import './App.css';
-import {parseToolsFromSpec} from '@buildwithlayer/openapi-to-tools';
-import {type APITool} from '@buildwithlayer/openapi-to-tools/dist/types';
-import {OpenAPI} from '@buildwithlayer/openapi-zod-spec/dist/3/1/1/open-api';
+import {parseToolsFromSpec} from '@buildwithlayer/openapi-to-tools/index.js';
+import {type APITool} from '@buildwithlayer/openapi-to-tools/types.js';
+import {OpenAPI} from '@buildwithlayer/openapi-zod-spec/3/1/1/open-api.js';
 import {useEffect, useState} from 'react';
 import FileUpload from './FileUpload.tsx';
 import Tools from './Tools.tsx';
